@@ -1,0 +1,331 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\graphicspath{ {C:/Users/DELLL/Desktop/WinterProject/Plots/} }
+\usepackage{dirtytalk}
+\usepackage[demo]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[style = authoryear]{biblatex}
+\addbibresource{References.bib}
+
+\begin{document}
+\title{\textbf{\Huge Hertzsprung-Russell Diagrams}}
+\author{\large Harshit Varma |  Harshda Saxena |  Manan Seth  |   Soham Purohit}
+\date{January 2020}
+\maketitle
+
+\section{Introduction}
+\large Hertzsprung-Russell Diagrams, or HR Diagrams for short, are the scatter plots of star populations of their luminosity vs surface temperature. More roughly, it is a plot of the stars' brightness against colour.\\ 
+These diagrams are important for the study of star populations and help in determining age of clusters, their distance from the earth, and also things like the properties of clusters.\newline\newline
+The following is quite an interesting article \parencite{valls-gabaud_2014} on the historical developments of these diagrams which we found at the start of a research paper.\newline\newline
+\say{Henry Russell was obsessed by priority, (self-)attribution and promotion (DeVorkin, 2000). For example, the famous Vogt(–Russell) theorem on stellar structure first appeared in 1926 (Vogt, 1926) and in his influential textbook Russell does give full credit to Vogt (Russell, Dugan & Stewart, 1927), yet he will later claim (Russell, 1931) that he had found it independently. \newline
+In the case of the CMD, Russell called it in private the “Russell diagram”, but this was not accepted in public, as the contribution by Hertzsprung (unlike Rosenberg’s) was well and widely known.\newline
+Russell poured over the astronomical journals, and was well aware of Hertzsprung’s results. We know he read the Astronomischen Nachrichten systematically, as one of the leading journals of the time, and that he was well aware of Hertzsprung’s papers just as was his mentor, E.C. Pickering, who received them and wrote to Hertzsprung discussing several issues in spectral classification. \newline
+Russell wrote to Hertzsprung on September 27, 1910, thanking him for sending copies of his papers (Hearnshaw, 1986). Hertzsprung (1911)’s paper contained the CMDs of the Hyades and the Pleiades, citing explicitly the previous –and pioneering–work by Rosenberg (1910).\newline\newline
+With the raising influence of European (mosly Dutch) astronomers in the USA, the issue of the proper acknowledgement became very serious and created frictions and debate within the community. After two decades, the “Russell diagram” became known as the Hertzsprung-Russell diagram, thanks in part to the influential conference delivered in 1933 by B. Stromgren at the meeting of the Astronomische Gesellschaft, but much to the irritation of many, including Russell himself who even refused to acknowledge that Hertzsprung had found (and coined the terms) ‘giant’ and ‘dwarf’ stars (Smith, 1977). \newline\newline
+The (proper) renaming of the diagram was a long battle which lasted till the late 1940s, when S. Chandraskhar, advising the Astrophysical Journal and tired of the controversy, decided that the standard nomenclature would be the “H–R Diagram” (DeVorkin,2000).\newline
+Rosenberg’s pioneering contribution has been unfairly forgotten from the history describing the elaboration of the first CMDs (see, e.g., Waterfield, 1956;
+Nielsen, 1969; DeVorkin, 2000). This ground-breaking result will be taken to good use to lay the foundations of stellar physics (see, e.g., Salaris & Cassisi, 2005), but the true pioneer has unfairly been forgotten to the extent that it would be a fitting tribute to rename the diagram as the Rosenberg-Hertzsprung-Russell diagram (RHR).\newline
+Ironically, HR also stands for Hans Rosenberg’s initials. }
+
+\section{Magnitude and Colour Index}
+\large Before moving onto the study of the HR diagrams, a few things were required to be known, namely, magnitude systems in astronomy, colour indices and the relation to temperature.\\
+\\
+Firstly, magnitudes: Magnitude is a unitless measure of the brightness of the star when viewed using a certain wavelength filter. It is a logarithmic scale, with a change in magnitude by one changes the brightness by a factor of 2.512. The reason for such a quirky system is historical. In Greece, the standard was set according to the order in which stars became visible at dusk. That is, the stars that appeared first were given the first order, followed by second, and so on. Later, the rough relation between these orders was quantified and this relation stuck around.\\
+The magnitude of a star 'as it appears from Earth' is known as apparent magnitude, The formula for magnitude is: \\
+\\
+$${ m=-2.512 log(\frac{I}{I_0})}$$\\* where $I_0$ is a reference intensity. The reference intensity decided was on the basis of two things: a) the star should be visible year-round and should be present throughout the night, and b) it should have constant intensity and be bright enough for the naked eye. An easy choice would have been polaris, but it was found that it has a brightness that varies with time. So Vega got the opportunity to be set as the standard with magnitude 0. That's why stars brighter than Vega have negative magnitude.\\
+ \\
+ \\
+However, this depends upon distances and is not good enough if we were to compare two stars at different distances from the Earth. This brought about the need to have something more absolute, i.e., absolute magnitude. Absolute magnitude is the magnitude of a star that would appear to us if the star were to be placed at a distance of ten parsecs from the earth (a length of 1 AU subtends one arc second when observed from a distance of one parsec). \\
+The relation between absolute and relative and absolute magnitude can be easily derived and is:\\
+$$m = M+5log(\frac{d}{10})$$ \\where d is the distance to the star in parsecs.\\
+\\
+Moving onto colour index, firstly, colour is something that is largely subjective. To quantify 'colour' per se, this is what is done: The intensity of stars are viewed in two different band gap filters. The different types of filters are U-B, B-V, V-R, R-I, which operate in different wavelength regions. A difference in magnitudes observed in these filters would quantify colour, because a larger difference in the blue and red filter would mean the star is bluer and vice versa. Colour has a direct relation to temperature because stars are approximate black bodies and the hotter they are, the bluer they will appear. This is why the colour magnitude diagram can be used as the observational counterpart for the luminosity-temperature diagram (HR Diagram).
+\\
+\section{Stellar Classification and Evolution}
+Astronomers classify stars based on the relative strengths of their absorption lines as  O B A F G K M L T .\newline
+Stellar spectra consists of Blackbody continuum spectrum by the star’s interior (hot dense gas) + a set of absorption lines given by the stellar atmosphere (cooler, low density gas).
+These lines give information about the composition of stars, their temperature etc.\\
+\begin{figure}[H]
+\caption{}
+\centering
+\includegraphics[scale = 0.55]{sclasses.png}\newline
+\end{figure}
+\section{Our Project}
+\large Now that we had the basics clear, we moved on to our actual project, which involved programming tasks along with certain theory we had to read on-the-fly. Programming involved learning python on our own and using it for the data analysis of datasets of star clusters obtained from the \href{https://archive.stsci.edu/prepds/hugs/}{HUGS} \parencite{piotto2015hubble} \parencite{nardiello2018hubble} directory. This data was to be used to firstly construct CMDs and use them to find other information regarding the cluster under study. \\
+\\
+\textbf{Task 1:} To load data of NGC2808 into the Jupyter notebook, which we did using \texttt{numpy.loadtxt()}.This functionality isn't limited only to NGC2808, and can be extended easily to any other cluster, provided we have the required data.  The file had lots of information in columns, regarding the cluster, but we needed only a few, namely the magnitudes of the stars in different filters, the RA and Dec of the stars and the probability column, which we isolated from the rest of the information using the \texttt{usecols} attribute within the \texttt{loadtxt} function. \\
+From this data, we plotted our first CMD, which looked anything but a CMD, the reason being: bad readings plus stars that actually did not belong to the cluster under study. Here, the probability column comes into play. We made a reasonable assumption that stars with only greater than 90\% probability actually belonged to the cluster. To eliminate the unwanted stars, various methods can be used:
+\begin{itemize}
+    \item 
+         We can do this using \texttt{numpy.where}, which returns an array of the index values of all stars with probability less than 90. This was followed by \texttt{numpy.delete} function, which conveniently deleted all the stars at those particular indices. \newline
+         Note here, at all times, the delete function is to be operated on all the data vectors we had obtained to maintain the unique one-one correspondence of the data values and the actual star. This is generally true for almost all functions applied on the arrays.
+     \item 
+        Another way we figured to do the same thing was making a new list of valid stars by appending them from the previous list and then plotting that.
+    \item     
+        Another way to do this is through boolean conditions.\newline
+        Let \texttt{prob} be the numpy array containing the probability data for the star cluster. When we do \texttt{prob > 90}, we get a boolean array consisting of True and False values, having True only where the condition, \texttt{prob > 90} is satisfied.\newline
+        Then, by doing \texttt{a = a[prob > 90]} we get a numpy array where only those values are taken which satisfy the enclosed condition.
+    \end{itemize}
+We also inverted the y axis to make the plot look better, and so that the comparison with the HR diagrams will be more convenient.\newline
+The plot now obtained looked like this:
+\begin{figure}[H]
+\caption{Garbage values not removed}
+\centering
+\includegraphics[scale = 1]{badgraph.png}\newline
+\end{figure}
+This was mainly due to the consideration of stars having a garbage value, (in this case, $\approx -100$), where the actual data wasn't available. So, like before, we had to eliminate these stars.\newpage
+\texttt{Task 2:} To create a reconstruction of the star cluster as seen in real life. This was done using the RA and Declination coordinates obtained from two of the columns that we had taken initially and plotting RA vs Dec using numpy.scatter(). However, this would give a monotonous reconstruction with all stars having same marker sizes, which is untrue as different stars have different brightness as seen from the earth. The solution? Vary marker size in proportion to the tenth power of the magnitude column using an appropriate weight such that the final picture looks good (something like 20,000).Here's the result:  
+\begin{figure}[H]
+\caption{}
+\centering
+\includegraphics[scale = 0.55]{ngc2808.png}\newline
+\end{figure}
+\newline
+You can see some abnormal line-like patches in the reconstruction which do not exist in real life. Recall that in the part where we deleted certain stars according to their probabilities of belonging to the cluster, we were left with some stars in the top right as well as the bottom left of the CMD. These were stars with probability more than 90 percent, yet were deleted because one or the other magnitude reading had turned out to be garbage. These should have been present in the cluster, and are now deleted due to instrumentation errors. Hence, these line-like structures.
+\newline
+\newpage
+\textbf{\Large Why stars differ from black bodies?}\newline
+\begin{enumerate}
+\item Source: \href{https://aasnova.org/2018/10/31/perfect-blackbodies-in-the-sky/}{AAS Nova} \parencite{suzuki2018blackbody}\newline
+ Blackbodies are objects that absorb all radiation that shines on them, and they emit their own radiation with a characteristic spectrum that depends only on temperature and spans all electromagnetic wavelengths.\newline
+ But just as nature doesn’t make true spherical cows, real stars are far from perfect blackbodies. \newline
+ Though blackbody-like radiation might leave the surface of a star, the gas of the star’s atmosphere absorbs and emits light, creating deep absorption and emission lines in the spectrum we observe. These lines, in fact, are how we classify stars — the O, B, A, F, G, K, and M spectral types for stars are determined based on what the lines muddying a star’s spectra tell us about its properties.
+ \begin{figure}[H]
+ \caption{The y-axis is $dI/d\lambda$}
+    \centering
+    \includegraphics[scale = 1.0]{Star_vs_BB.png}
+    \end{figure}
+ Sometimes, however, nature apparently is simple. Two scientists, Nao Suzuki and Masataka Fukugita of the University of Tokyo, have now discovered 17 stars that are ideal blackbodies: the stars have no distinct spectral features from infrared to ultraviolet wavelengths.\newline
+ The first of these bizarre stars was found by accident — it was stumbled upon in a Sloan Digital Sky Survey (SDSS) catalog of quasars(A quasar (also known as a quasi-stellar object abbreviated QSO) is an extremely luminous active galactic nucleus (AGN), in which a supermassive black hole with mass ranging from millions to billions of times the mass of the Sun is surrounded by a gaseous accretion disk.). Following up on this unexpected discovery, Suzuki and Fukugita hunted through nearly 800,000 star-like objects in SDSS archives, looking for other blackbody spectra that showed large proper motions (implying the objects are probably nearby stars) and no spectral features.\newline
+ The authors then explored Galaxy Evolution Explorer (GALEX) ultraviolet spectra and Wide-field Infrared Survey Explorer (WISE) infrared spectra for their candidates, to ensure that the candidates’ blackbody behavior extends beyond just the visible-light spectrum. This selective approach produced 17 objects that met all criteria.\newline
+The 17 blackbody stars pose an intriguing puzzle: what are these oddly ideal bodies? Suzuki and Fukugita argue that the stars’ properties are consistent with those of a special type of compact object — a DB white dwarf — that has a temperature too low (a cool ~10,000 K) to develop helium absorption features.\newline
+These almost perfect blackbodies were used to calibrate the various photometric instruments.
+For more details, \href{https://aasnova.org/2018/10/31/perfect-blackbodies-in-the-sky/}{click here.}
+ \begin{figure}[H]
+ \caption{(Source: American Scientist
+the magazine of Sigma Xi, The Scientific Research Society)White dwarf varieties are defined by the elements that dominate their surfaces as revealed by their spectra (the continuum of light
+they emit). Nearly all white dwarfs are believed to contain a core of carbon and oxygen (blue). Three varieties—DA, DB and DO white
+dwarfs—have nearly pure surfaces of hydrogen or helium lying atop their cores, whereas PG 1159 stars appear to be partially exposed cores.
+White dwarfs may also have a mixture of elements on their surfaces, and are named accordingly. For example, DAB stars contain hydrogen
+and neutral helium, whereas DAO stars have hydrogen and ionized helium.}
+    \centering
+    \includegraphics[scale = 0.8]{White_Dwarfs_Types.png}
+    \end{figure}
+\item  Source : \href{https://web.njit.edu/~gary/321/Lecture2.html}{New Jersey Institute of Technology}\newline
+If stars were \textbf{perfect blackbodies}, we could use their B-V color index to determine their temperature from the relation:
+$$CI = B-V = -0.71 + 7090 / T $$
+B - V for the sun is 0.65, plugging it in the above formula, we get:
+$$T\approx 5213K$$
+But we know that the surface temperature of the sun(Wikipedia) is 5778K, This also shows, somewhat, that the sun isn't a perfect blackbody.
+\end{enumerate} \newpage
+
+\textbf{\Large The Turnoff point:}
+\begin{enumerate}
+    \item A very trivial algorithm for determining the turnoff point which gave a very approximate result in 5/6 cases tested, failure due to the large number of data points, and the white dwarf sequence.
+    \item The algorithm is based on the fact that there will be a vertical 'tangent' at the turnoff point. 
+    \begin{verbatim}
+        def turnoff(x) :
+        for i in range(x.size):
+        if i > 0 :
+            if abs(x[i]-x[i-1]) == 0 :
+                return [x[i],y[i]]
+    \end{verbatim}
+    
+    \begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[scale = 0.6]{turnoff2.png}
+      \caption{Successful case}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[scale = 0.6]{turnoffF.png}
+      \caption{Failed case}
+    \end{subfigure}
+    \caption{Results}
+    \end{figure}
+\end{enumerate}\newpage
+\begin{center}\textbf{\Huge INTER IIT 2018}\end{center}\newline
+\\
+\textbf{\Large Part 1: Half Light Radius}\newline\\
+The half life radius of a globular cluster is defined as the radius of the disc within which appear to lie the stars that are responsible for emitting $50\%$ of the total luminosity of the globular cluster. Finding this is useful for astronomers because stars generally get fainter as we move farther away from a cluster. Hence a metric like half light radius can be useful to overcome ambiguities in defining the boundaries of a cluster.\newline\\
+We used a reconstruction of the star cluster, and used an appropriate weight to the tenth power of magnitudes of the stars. We then found out the approximate center of the star cluster by using their medians as the center. This took care of outliers as compared to taking a mean. We then used \texttt{numpy.delete()} and included this code in a for loop with varying radius of a circle until we found the exact half light radius. This, along with distance to the cluster was used to determine the radius in terms of light years.\newline
+Another way in which this task was done was through hit and trial method of changing the radius of the circle till we got the right radius. Sometimes this takes less time than actually executing the for loop. 
+
+\newpage
+\textbf{\Large Part 2: Estimating The Age}
+\newline
+\newline
+\newline
+Our next task was to estimate the age of the cluster by finding the turn off point and using the luminosity mass relation already given in the problem.
+\begin{figure}[H]
+\caption{}
+\centering
+\includegraphics[scale = 0.4]{turnoff.png}\newline
+\end{figure}
+As it was the easiest and least time consuming, the turnoff point was found by hit and trial method. This, along with the information that the time spent by a star in its main sequence is proportional to the ratio of the mass and luminosity, along with the main sequence lifetime of the sun was used to estimate the age of the cluster. Another relation that was needed in this problem was the relation of a star's luminosity to its mass ($L \propto M^{3.8}$), which was given in the problem statement. The final answers we obtained weren't as accurate as we expected them to be, however they had the same power of ten, as the actual, hence that amount of error was neglected.
+\newpage
+
+\textbf{\Large Part 4: Optical Counterparts}\newline\\
+Consider this analogy: You are in your car, and hear the noise of an engine. You look outside and see a car is making that sound. The car is the optical counterpart to the audio source.\newline
+Similarly, we find two X-ray sources at the given positions by some method, now we need to find the optical counterparts(the astronomical systems responsible for this, for example, X-ray binaries) to these sources from the available photometric data.
+\begin{enumerate}
+    \item We first load all the required data, and find the stars which occur in the given region. These are the potential optical counterparts.
+    \item We then extract the IDs of these stars, and plot them on the CMD to further analyse their properties.
+    \begin{figure}[H]
+    \caption{F438W vs F438W - F814W:}
+    \centering
+    \includegraphics[scale = 0.7]{xr3.png}
+    \end{figure}\newline
+    \item From this CMD(F438W vs F438W - F814W), most of the plausible optical counterparts lie on the MS which suggests that they may be low mass x-ray binaries (LMXBs).\newline
+    The star at the top, (ID:R0006439) is situated at the start of the RGB in this CMD. Now, let's plot another CMD having different values on the axes.
+    \begin{figure}[H]
+    \caption{F275W vs F275W - F606W:}
+    \centering
+    \includegraphics[scale = 0.7]{xr4.png}
+    \end{figure}\newline
+    \item Most of the stars still lie on the MS, but there is one significant difference between this CMD and the previous one.\newline
+    The star(ID: R0006439) shows significant change in the color index value and is now present near the blue straggler region.\newline
+    \item Probable explanations for this:\newline
+    \begin{enumerate}
+        \item The source is some kind of variable, but we weren't sure what kind.
+        \item The differences could be due to dispersion in atmosphere (extinction), or interstellar medium (reddening)
+        \item The source is not blackbody-like. It has some different kind of spectra.
+        \item In LMXB systems the donor is less massive than the compact object, and can be on the main sequence, a degenerate dwarf (white dwarf), or an evolved star (red giant).\newline
+        Therefore it is probable that the MS stars obtained could be a part of LMXBs.\newline
+        \end{enumerate}
+        \item Now, comparing the results obtained by us and in the paper \parencite{Zhao_2018} we can see that the results obtained by their extensive research matches quite well with ours. 
+        \begin{enumerate}
+            \item From the section 4.1 of the paper we can identify the star in region 1 to be CX1, a cataclysmic variable.
+            \item From the section 4.2 of the paper we can identify the star in region 2 to be CX2, a quiescent LMXB.
+        \end{enumerate}
+        Thus we identify optical counterparts for the given sources.
+        \begin{figure}[H]
+        \caption{Final Results:}
+        \centering
+        \includegraphics[scale = 0.52]{xr5.png}
+        \end{figure}
+\end{enumerate}\newpage
+\textbf{\Large The Image Reconstruction: }\newline
+\begin{enumerate}
+    \item Took the F606W calibrated magnitude into consideration.
+    \item   Loaded the RA and dec coordinates from the data file, plotted a simple scatterplot.
+    \item Calculated the average magnitude across all the stars in the cluster neglecting the ones whose magnitudes weren't available.
+    \item Using the relation: $$L = (Constant)*10^{-0.4m}$$
+    where L is the luminosity and m is apparent magnitude in the F606W waveband.
+    Assigned the area of each point by the following numpy array-'area':
+    \begin{verbatim}
+    factor = pow(10,5)
+    area = pow(10, -0.4*m) * factor
+    \end{verbatim}
+    \textbf{No stars were excluded}, no probability consideration taken, the stars which didn't have the calibrated magnitude were assigned the average value.
+    \begin{figure}[H]
+    \caption{Magnitude accounted}
+    \centering
+    \includegraphics[scale = 0.7]{image_rec_f.png}\newline
+    \end{figure}
+    \begin{figure}[H]
+    \caption{Image given in the archive}
+    \centering
+    \includegraphics[scale = 0.6]{Actual_Image_NGC2808.png}\newline
+    \end{figure}
+\end{enumerate}\newpage
+
+\textbf{\Large Coloured Image Reconstruction:\newline }
+We try to add color to the image reconstructed in the previous parts.
+ \begin{enumerate}
+     \item We use F606W filter for generating the red image, F438W for green and F336 for blue images. Opacity factor, and \texttt{edgecolors} parameter can be specified when required.\newline
+     Note that the \texttt{edgecolors} parameter drastically changes the output image, thus the scaling factors and opacities need to be adjusted accordingly when considering this.\newline
+     It is recommended not to consider this.
+     \item As only image is required, we remove the axes and the borders from the plot by using \texttt{plt.gca().axis('off')}, and use a dark background and save the image in high resolution using \texttt{plt.savefig('image.png', dpi = 500)}
+     \item We then use any standard photo editing software and merge these 3 plots additively. 
+     \begin{figure}[H]
+    \caption{This was the stacked image obtained using the software, paint.net}
+    \centering
+    \includegraphics[scale = 1]{rgb6.png}
+    \end{figure}\newpage
+ \end{enumerate}
+ \textbf{\Large Main Sequence Matching (Manually): }
+\begin{enumerate}
+    \item Messier 3 (NGC5272) is taken as the reference, because of no evidence of multiple populations and the concise nature of it's main sequence.
+    \item The program asks the user to enter the expected value of distance modulus and shifts the cluster by this value to match both the main sequences. Knowing the distance of the reference cluster, and the ratio, we get the distance of the cluster from the following formula:
+    $$r_1 / r_2 = 10 ^ {(m_1 - m_2)/5}$$
+    \item The main sequences are matched manually which is inaccurate resulting in a large error in the ratio. (exponential function)
+    \item A custom legend is added using \texttt{matplotlib.patches}
+    \begin{figure}[H]
+    \caption{Ratio}
+    \centering
+    \includegraphics[scale = 1]{ratio4.png}
+    \end{figure}\newpage
+\end{enumerate}
+\textbf{\Large Main Sequence Matching (Algorithmically):}\newline
+\textit{Reference taken: NGC5272/Messier 3 }
+\begin{enumerate}
+    \item Determining the Magnitude Limits:\newline
+    I have taken the color index as F336W - F606W and the Y-axis as F336W.
+    This particular combination makes the subgiant branch almost horizontal in almost all the datasets tested. This combination was found by hit and trial.
+    We need horizontal subgiant branch so that we can select the main sequence by limiting the magnitudes only till this limit by a horizontal line. If not horizontal, the main sequences will also have stars from the subgiant and the giant branch.
+    \begin{enumerate}
+        \item We determine the magnitude limits in the following way:\newline
+        \begin{enumerate}
+            \item We take a constant $\varepsilon$ which is initialized to 0. Two points are said to be very close to each other when the differ by $\varepsilon$ .
+            \item We loop through the F336W magnitudes,the Y-axis, and check whether consecutive points differ by $\varepsilon$.
+            We have taken an assumption here that the subgiant branch will lie above the mean of the y values.\newline
+            There was a major problem with this implementation: The function returned {\tt None} when it found no such y. This was because of the value of epsilon.It can be solved as follows:\newline
+            Whenever nothing is returned, increase $\varepsilon$ by 0.01 and call the function again. If none is returned, and epsilon reaches 0.1(A large value), then return the magnitude limit of the reference as we couldn't find any satisfactory limit.\newline
+            This solved the problem when nothing was getting returned.
+            \end{enumerate}
+    \end{enumerate}
+    \item Now, we limit the dataset only to those stars which have magnitudes greater than this limit, and using {\tt scipy.optimize.curve\textunderscore fit} we can fit a straight line through the selected points, for both the reference and the cluster under consideration.
+    \item We now look for a method to estimate the distance between these two almost parallel lines, which will also be the distance modulus.
+    \begin{enumerate}
+        \item \textbf{Method 1:}  We take the mean of the x values for the reference and find difference in the y values on the lines corresponding to this x.\newline
+        This method, although not correct gave a surprisingly accurate answer for 5 out of 6 datasets tested with a maximum error of about 10\% for NGC6652.
+        \item \textbf{Method 2:} We find the midpoints for both the line segments enclosed within the y-limits and rotate the lines about this point such that after rotation, their new slopes are equal to the average of the old slopes. This makes the resulting lines parallel to each other, and now, distance between two parallel lines can be calculated along the y - axis in a mathematically correct way.
+    \end{enumerate}
+    \item Now, knowing the distance modulus we can determine the ratio, distance, error from the standard formulas.
+    $$ratio = 10^{\frac{(distance\textunderscore modulus)}{5}}$$
+    $$distance(kpc) = ratio\times 10.4$$
+    The automatic error calculation is an optional functionality implemented through web-scraping and calculates the error with respect to the distance given by Wikipedia.
+    \begin{figure}[H]
+    \caption{The final result:}
+    \centering
+    \includegraphics[scale = 0.75]{match5.png}
+    \end{figure}\newpage
+\end{enumerate}
+\textbf{\Large Isochrone Fitting: }\newline
+ \begin{enumerate}
+     \item In our isochrone fitting we use the PAdova and TRieste Stellar Evolution Code (PARSEC) \parencite{10.1111/j.1365-2966.2012.21948.x} for generaing the isochrone tables.
+     \item The magnitudes given by this are absolute in nature and must be converted to apparent for fitting by adding the distance modulus and extinction.
+     \item We find that the generated isochrone lies a little bit to the left of the observed CMD, this is maybe due to the interstellar reddening. 
+     \item As of now, we use the 'fitting-by-eye' approach to estimate the goodness of fit, and accept the values for the age,extinction and reddening from the user. The metallicities have been taken directly from Wikipedia and was required for generating the isochrone. The distance modulus values are calculated from the distance which was again taken from an  \href{http://gclusters.altervista.org/}{online source}). 
+     \item We generate the isochrones from the age ranging from 1 Gyr to 13 Gyr at an interval of 0.1 Gyr.
+     \item At the start of the program, the user is asked the name of the cluster, the expected age, the extinction and the reddening value. An isochrone is then generated and shifted by an appropriate amount as inputted by the user.\newline
+     All this is in a loop and at the end of each isochrone generated, the user is asked whether the obtained fit is good enough, the process is repeated until a 'yes' is encountered.
+      \begin{figure}[H]
+    \caption{Results:}
+    \centering
+    \includegraphics[scale = 1]{isocfit7.png}
+    \end{figure}\newpage
+\end{enumerate}
+\textbf{\Large Future Prospects}\newline
+\begin{enumerate}
+\item Since as specified before, the Isochrone fitting was done by eye, hence a statistical way to fit isochrones is a major future endeavor.
+\item The Ballesteros' formula \parencite{Ballesteros_2012} which relates the effective temperatures to color indices which can be calculated by assuming stars as blackbodies, is an empirically derived relation. \newline
+     $T = 4600\times(\frac{1}{0.92x + 1.7} + \frac{1}{0.92x + 0.62})$ \newline
+A major challenge would be to numerically derive this formula.
+\item To further study color vs Temperature relation for real stars.
+\item Extracting branches of stars using colour indices (eg: Blue Horizontal Branch, Red Clump Stars etc).
+\item Plotting HR Diagrams for large surveys (Gaia, Pan-STARSS) to study local stellar properties (for example, arxiv:1901.02900 found two populations from Gaia DR2)
+\newline
+\printbibliography
+     
+\end{enumerate}
+\end{document}
