@@ -1,4 +1,7 @@
 # Exploring Hertzsprung Russell Diagrams  
-Contains the code and the report for the winter project I had taken up in 2019, under Krittika - Astronomy Club of IIT Bombay.  
+Winter project taken up in 2019,  under [Krittika - Astronomy Club of IIT Bombay](https://www.facebook.com/KrittikaIITB/) ([@krittikaiitb](https://github.com/krittikaiitb))
 
-The code will be uploaded soon after I edit it to be more readable. 
+---
+
+- [Related code](Exploring-HR-Diagrams/Code)
+- [Project report and presentation slides](Exploring-HR-Diagrams/Reports)
