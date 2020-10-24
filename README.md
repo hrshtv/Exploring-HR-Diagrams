@@ -13,3 +13,9 @@ Most data was taken from [HST UV Globular Cluster Survey ("HUGS")](https://archi
 
 - [Related code](Code)
 - [Project report and presentation slides](Reports)
+
+---
+
+A few references:
+- [PARSEC Interface](http://stev.oapd.inaf.it/cgi-bin/cmd)
+- [HUGS Data](https://archive.stsci.edu/prepds/hugs/)
